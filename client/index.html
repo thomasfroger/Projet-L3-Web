@@ -1,0 +1,69 @@
+<!doctype>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Le sport vue pour les étudiants</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/http-vue-loader/src/httpVueLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router/dist/vue-router.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1 class="title">Le sport pour les étudiants</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <router-link to='/accueil'>Accueil</router-link>
+                    </li>
+                    <li>
+                        <router-link to='/tarifs'>Premium</router-link>
+                    </li>
+                    <li>
+                        <router-link to='/Panier'>Panier</router-link>
+                    </li>
+                    <li>
+                        <router-link to='/AboutUs'>About Us</router-link>
+                    </li>
+                    <li>
+                        <router-link to='/register'>Register</router-link>
+                    </li>
+                    <li>
+                        <router-link to='/login'>Login</router-link>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </header>
+        <main>
+            <router-view :sports="sports" :panier="panier" @add-to-panier="addToPanier" @remove-from-panier="removeFromPanier" @add-sports="addSport" @delete-sports="deleteSport" @update-sports="updateSport" @add-one="addOne" @remove-one="removeOne" @add-client="addClient"
+                @connect-client="connectClient"></router-view>
+        </main>
+    </div>
+    <footer>
+        <a href="https://www.facebook.com/RejoinsLeCoteObscur.OnADesCookies" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/technoflexdetente/?hl=fr" class="fa fa-instagram"></a>
+        <a href="https://www.youtube.com/watch?v=04854XqcfCY" class="fa fa-youtube"></a>
+    </footer>
+    <script src=" /vue-application.js "></script>
+
+</body>
+
+</html>
+
+<style>
+    p {
+        color: #ffffff;
+    }
+
+    p {
+        text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+    }
+</style>
